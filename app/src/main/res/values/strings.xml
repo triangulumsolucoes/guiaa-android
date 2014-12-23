@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">GuiaA</string>
-    <string name="hello_world">Hello world asd!</string>
+    <string name="hello_world">Hello world comparacao!</string>
     <string name="action_settings">Settings</string>
 
 </resources>
