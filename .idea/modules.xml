@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GuiaA.iml" filepath="$PROJECT_DIR$/GuiaA.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guiaa-android.iml" filepath="$PROJECT_DIR$/guiaa-android.iml" />
     </modules>
   </component>
 </project>
