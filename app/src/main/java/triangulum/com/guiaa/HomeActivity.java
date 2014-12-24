@@ -13,6 +13,7 @@ public class HomeActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
+
         //Francielly
 
         //Raissa
