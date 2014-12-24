@@ -5,16 +5,92 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/area_logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/texto" />
+        android:background="@color/laranja_guiaa"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_imagem_logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/logo_guiaa_tocantins"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/area_edittext"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/branco_padrao"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/item_texto_busca"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:hint="@string/hint_searchview_home_activity"/>
+
+           <ImageView
+               android:id="@+id/item_btn_pesquisar"
+               android:layout_width="match_parent"
+               android:layout_height="40dp"
+               android:layout_marginLeft="5dp"
+               android:scaleType="fitXY"
+               android:layout_weight="6"
+               android:src="@drawable/search"/>
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/area_escolha_localizacao"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_icone"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:src="@drawable/search"/>
+
+            <TextView
+                android:id="@+id/item_localizacao_atual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/cinza_padrao"
+                android:textSize="15dp"
+                android:hint="Palmas"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/item_escolher_localizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/cinza_padrao"
+            android:textSize="15dp"
+            android:hint="@string/msg_escolha_localizacao"/>
+     </LinearLayout>
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_marginTop="5dp"
         android:layout_height="match_parent"
-        android:layout_below="@id/texto"
+        android:layout_below="@id/area_logo"
         android:name="com.google.android.gms.maps.MapFragment"/>
 
 </RelativeLayout>

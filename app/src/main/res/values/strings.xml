@@ -5,4 +5,10 @@
     <string name="hello_world">Hello world comparacao!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- HINTS -->
+    <string name="hint_searchview_home_activity">O que você deseja encontrar?</string>
+
+    <!-- MENSAGENS -->
+    <string name="msg_escolha_localizacao">Escolha outra cidade</string>
+
 </resources>
