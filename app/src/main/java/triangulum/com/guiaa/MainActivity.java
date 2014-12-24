@@ -16,7 +16,6 @@ public class MainActivity extends ActionBarActivity {
         //Francielly
 
         //Raissa
-        //Cicero
     }
 
     @Override
