@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/item_dado_contato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/item_icone_contato"
+        android:text="62656566565"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@id/item_icone_contato"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <View
+        android:id="@+id/item_separador_contato"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/item_dado_contato"
+        android:layout_marginTop="20dp"
+        android:background="@color/cinza_padrao" />
+
+</RelativeLayout>
