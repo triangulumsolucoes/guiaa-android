@@ -14,5 +14,6 @@
 
     <!-- MENSAGENS -->
     <string name="msg_escolha_localizacao">Escolha outra cidade</string>
+    <string name="msg_escolha_local">Escolha o local da busca</string>
 
 </resources>
