@@ -11,7 +11,7 @@
         android:layout_above="@+id/area_dados_local"/>
 
     <include
-        android:id="@+id/area_dados_local"
+        android:id="@id/area_dados_local"
         layout="@layout/adapter_local"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -8,6 +8,7 @@
     <!--TITULOS -->
     <string name="endereco">Endereço</string>
     <string name="telefones">Telefone &#40;s&#41;</string>
+    <string name="emails">E&#45;mail &#40;s&#41;</string>
 
     <!-- HINTS -->
     <string name="hint_searchview_home_activity">O que você deseja encontrar?</string>

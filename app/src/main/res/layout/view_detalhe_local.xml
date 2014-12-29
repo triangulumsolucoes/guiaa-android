@@ -86,6 +86,7 @@
         android:id="@+id/area_telefones_local"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -102,5 +103,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"></LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/area_emails_local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_titulo_email_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emails"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/area_dados_email_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>
