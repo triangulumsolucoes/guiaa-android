@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/area_bar_busca_localizacao"
-        layout="@layout/layout_bar_busca_localizacao"
+        layout="@layout/view_bar_busca_localizacao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

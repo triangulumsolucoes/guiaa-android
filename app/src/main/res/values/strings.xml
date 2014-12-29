@@ -5,6 +5,10 @@
     <string name="hello_world">Hello world comparacao!</string>
     <string name="action_settings">Settings</string>
 
+    <!--TITULOS -->
+    <string name="endereco">Endereço</string>
+    <string name="telefones">Telefone &#40;s&#41;</string>
+
     <!-- HINTS -->
     <string name="hint_searchview_home_activity">O que você deseja encontrar?</string>
 

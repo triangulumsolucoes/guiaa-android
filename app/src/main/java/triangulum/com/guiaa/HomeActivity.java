@@ -11,7 +11,7 @@ public class HomeActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listagem_locais);
+        setContentView(R.layout.activity_detalhe_local);
 
 
 
