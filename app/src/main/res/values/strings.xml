@@ -5,10 +5,10 @@
     <string name="hello_world">Hello world comparacao!</string>
     <string name="action_settings">Settings</string>
 
-    <!--TITULOS -->
+    <!-- TITULOS -->
     <string name="address">Endereço</string>
-    <string name="phones">Telefone &#40;s&#41;</string>
-    <string name="emails">E&#45;mail &#40;s&#41;</string>
+    <string name="phones">Telefone (s)</string>
+    <string name="emails">E-mail (s)</string>
 
     <!-- HINTS -->
     <string name="hint_wish_find">O que você deseja encontrar?</string>
@@ -21,9 +21,9 @@
     <string name="lost_connection">Foi perdida a conexão com internet.</string>
     <string name="connection_timeout">O servidor não responde. Tente mais tarde.</string>
 
-
     <!-- STATIC URL -->
     <string name="url_list_cities">http://private-83368-guiaatocantins.apiary-mock.com/listaCidades</string>
     <string name="url_list_advertisers">http://private-83368-guiaatocantins.apiary-mock.com/listaAnunciantes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
