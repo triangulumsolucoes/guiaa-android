@@ -32,7 +32,7 @@ public class HomeActivity extends ActionBarActivity{
         setContentView(R.layout.activity_home);
 
         ActionBar actionBar = getSupportActionBar();
-
+        actionBar.hide();
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (FrameLayout) findViewById(R.id.left_drawer);
 
@@ -95,24 +95,19 @@ public class HomeActivity extends ActionBarActivity{
         if (fragment != null) {
 
 
-            // FragmentTransaction transaction = getSupportFragmentManager()
-            // .beginTransaction();
-            // transaction.replace(R.id.content_frame,frag);
-            // transaction.commit();
-            // update selected item and title, then close the drawer
-
             mDrawerLayout.closeDrawer(mDrawerList);
         }
     }
 
+    public void openDrawer(){
+
+        mDrawerLayout.openDrawer(mDrawerList);
+    }
 
 
-//	private void executaServiceCallbexLocalizacao(
-//			FragmentListagemCallbex fragment) {
-//		ServiceCallbexPorLocalizacao detalheCallbex = new ServiceCallbexPorLocalizacao(
-//				fragment, this);
-//		detalheCallbex.execute();
-//	}
+
+
+
 
 
     @Override

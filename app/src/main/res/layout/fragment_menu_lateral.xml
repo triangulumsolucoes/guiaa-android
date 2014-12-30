@@ -1,41 +1,75 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="match_parent"
-    android:background="#fff9f9f9"
-    android:orientation="vertical"
-     >
+    android:background="@color/branco_padrao"
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_launcher"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/branco_padrao"
+        android:src="@drawable/logo_redimencionada"
         android:layout_gravity="center"
-        android:background="#ffffff"
-        android:layout_margin="20dp" />
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ff757575"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cinza_padrao"
+        android:orientation="horizontal"
         >
-    <TextView
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/msg_escolha_local"
             android:padding="10dp"
-            android:textColor="#fff" />
-        </LinearLayout>
+            android:text="@string/msg_escolha_local"
+            android:textColor="@color/branco_padrao" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/area_minha_localizacao"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/minha_localizacao"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imagem_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp"
+            android:src="@drawable/check"
+            android:visibility="gone"
+
+            />
+
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/lista_cidades"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp" />
 
-        android:choiceMode="singleChoice"
-        android:background="#fff9f9f9" />
-
-    </LinearLayout>
+</LinearLayout>
