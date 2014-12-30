@@ -104,12 +104,6 @@ public class HomeActivity extends ActionBarActivity{
         mDrawerLayout.openDrawer(mDrawerList);
     }
 
-
-
-
-
-
-
     @Override
     public void setTitle(CharSequence title) {
     }

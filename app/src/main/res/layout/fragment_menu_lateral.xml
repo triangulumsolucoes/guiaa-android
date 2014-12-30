@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="@string/msg_escolha_local"
+            android:text="@string/msg_choose_local"
             android:textColor="@color/branco_padrao" />
     </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
             android:paddingTop="16dp"
-            android:text="@string/minha_localizacao"
+            android:text="@string/my_location"
             android:textSize="16sp" />
 
         <ImageView

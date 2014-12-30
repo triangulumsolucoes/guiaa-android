@@ -6,16 +6,24 @@
     <string name="action_settings">Settings</string>
 
     <!--TITULOS -->
-    <string name="endereco">Endereço</string>
-    <string name="telefones">Telefone &#40;s&#41;</string>
+    <string name="address">Endereço</string>
+    <string name="phones">Telefone &#40;s&#41;</string>
     <string name="emails">E&#45;mail &#40;s&#41;</string>
 
     <!-- HINTS -->
-    <string name="hint_searchview_home_activity">O que você deseja encontrar?</string>
+    <string name="hint_wish_find">O que você deseja encontrar?</string>
 
     <!-- MENSAGENS -->
-    <string name="minha_localizacao">Minha Localização</string>
-    <string name="msg_escolha_localizacao">Escolha outra cidade</string>
-    <string name="msg_escolha_local">Escolha o local da busca</string>
+    <string name="my_location">Minha Localização</string>
+    <string name="msg_choose_location">Escolha outra cidade</string>
+    <string name="msg_choose_local">Escolha o local da busca</string>
+    <string name="waiting">Aguarde</string>
+    <string name="lost_connection">Foi perdida a conexão com internet.</string>
+    <string name="connection_timeout">O servidor não responde. Tente mais tarde.</string>
+
+
+    <!-- STATIC URL -->
+    <string name="url_list_cities">http://private-83368-guiaatocantins.apiary-mock.com/listaCidades</string>
+    <string name="url_list_advertisers">http://private-83368-guiaatocantins.apiary-mock.com/listaAnunciantes</string>
 
 </resources>

@@ -1,9 +1,12 @@
 package triangulum.com.guiaa.model;
 
+import java.io.Serializable;
+
 /**
  * Created by triangulum on 29/12/14.
  */
-public class Cidade {
+
+public class Cidade implements Serializable{
 
     private int id;
     private String nome;
@@ -17,7 +20,7 @@ public class Cidade {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setName(String nome) {
         this.nome = nome;
     }
 
@@ -28,9 +31,6 @@ public class Cidade {
     public void setId(int id) {
         this.id = id;
     }
-
-
-
 
 
 }
