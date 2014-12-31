@@ -20,6 +20,7 @@
     <string name="waiting">Aguarde</string>
     <string name="lost_connection">Foi perdida a conexão com internet.</string>
     <string name="connection_timeout">O servidor não responde. Tente mais tarde.</string>
+    <string name="msg_what_near_me">O que tem perto de mim?</string>
 
     <!-- STATIC URL -->
     <string name="url_list_cities">http://private-83368-guiaatocantins.apiary-mock.com/listaCidades</string>

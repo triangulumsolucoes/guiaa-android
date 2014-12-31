@@ -13,20 +13,25 @@ import triangulum.com.guiaa.activities.HomeActivity;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private LinearLayout areaSelecaoLocalizacao;
+    private LinearLayout areaSelectionLocation;
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        areaSelecaoLocalizacao = (LinearLayout)view.findViewById(R.id.area_selecao_localizacao);
-        areaSelecaoLocalizacao.setOnClickListener(this);
+        areaSelectionLocation = (LinearLayout)view.findViewById(R.id.area_selection_location);
+        areaSelectionLocation.setOnClickListener(this);
         return view;
     }
 
     @Override
     public void onClick(View v) {
-        if(v==areaSelecaoLocalizacao){
+        if(v==areaSelectionLocation){
             HomeActivity activityHome = (HomeActivity) getActivity();
             activityHome.openDrawer();
         }
+    }
+
+    public void setCityChosen() {
+
     }
 }

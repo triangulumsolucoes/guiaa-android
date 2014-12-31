@@ -6,22 +6,22 @@ import java.io.Serializable;
  * Created by triangulum on 29/12/14.
  */
 
-public class Cidade implements Serializable{
+public class City implements Serializable{
 
     private int id;
-    private String nome;
+    private String name;
 
-    public Cidade(int id, String nome) {
+    public City(int id, String nome) {
         this.id = id;
-        this.nome = nome;
+        this.name = nome;
     }
 
     public String getNome() {
-        return nome;
+        return name;
     }
 
     public void setName(String nome) {
-        this.nome = nome;
+        this.name = nome;
     }
 
     public int getId() {

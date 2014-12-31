@@ -1,6 +1,5 @@
 package triangulum.com.guiaa.activities;
 
-import android.app.Activity;
 import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -14,16 +13,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import java.util.ArrayList;
+
 import triangulum.com.guiaa.R;
 import triangulum.com.guiaa.fragment.HomeFragment;
 import triangulum.com.guiaa.fragment.MenuLateralFragment;
+import triangulum.com.guiaa.interfaces.CitiesListener;
+import triangulum.com.guiaa.model.City;
+import triangulum.com.guiaa.services.ListCitiesService;
 
-public class HomeActivity extends ActionBarActivity{
+public class HomeActivity extends ActionBarActivity implements CitiesListener {
 
 
     private DrawerLayout mDrawerLayout;
     private FrameLayout mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
+    private MenuLateralFragment fragmentMenuLateral;
+    private HomeFragment fragmentHome;
 
 
     @Override
@@ -31,20 +37,37 @@ public class HomeActivity extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        configureActionBar();
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (FrameLayout) findViewById(R.id.left_drawer);
 
+
+
+
+        fragmentMenuLateral = new MenuLateralFragment();
+        serviceListCities();
+
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.left_drawer, new MenuLateralFragment());
+        transaction.replace(R.id.left_drawer, fragmentMenuLateral);
         transaction.commit();
 
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(false);
+        configureMenuLateral();
+
+        updateDisplay(0);
+
+        fragmentHome = new HomeFragment();
+        trocaFragment(fragmentHome);
+    }
 
 
 
+    private void serviceListCities() {
+        ListCitiesService serviceListCities = new ListCitiesService(this,this);
+        serviceListCities.execute();
+    }
+
+    private void configureMenuLateral() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.string.app_name, R.string.app_name) {
             public void onDrawerClosed(View view) {
@@ -61,13 +84,13 @@ public class HomeActivity extends ActionBarActivity{
         };
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
-        //
-        // if (savedInstanceState == null) {
-        // // on first time display view for first nav item
-        updateDisplay(0);
-        // }
+    }
 
-        trocaFragment(new HomeFragment());
+    private void configureActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(false);
     }
 
     @Override
@@ -103,6 +126,12 @@ public class HomeActivity extends ActionBarActivity{
 
         mDrawerLayout.openDrawer(mDrawerList);
     }
+
+
+
+
+
+
 
     @Override
     public void setTitle(CharSequence title) {
@@ -146,6 +175,10 @@ public class HomeActivity extends ActionBarActivity{
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
+    public void setCityChosen(City city) {
+        fragmentHome.setCityChosen();
+    }
+
     public void trocaFragment(Fragment fragmento) {
 
         if(mDrawerLayout.isShown()){
@@ -157,6 +190,20 @@ public class HomeActivity extends ActionBarActivity{
         transaction.commit();
     }
 
+    @Override
+    public void onCitiesSuccess(ArrayList<City> cities) {
+        fragmentMenuLateral.setCities(cities);
+    }
+
+    @Override
+    public void onCitiesServerError() {
+
+    }
+
+    @Override
+    public void onCitiesError(String error) {
+
+    }
 
 
 }

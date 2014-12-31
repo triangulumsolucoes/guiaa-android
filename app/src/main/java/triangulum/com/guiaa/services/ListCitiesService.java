@@ -1,6 +1,7 @@
 package triangulum.com.guiaa.services;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.google.gson.reflect.TypeToken;
 
@@ -26,7 +27,7 @@ public class ListCitiesService extends ServiceBase {
     private Activity activity;
     private CitiesListener citiesListener;
 
-    private ArrayList<Cidade> cities;
+    private ArrayList<City> cities;
 
     private Error error;
     private boolean isTimeout = false;
@@ -47,16 +48,20 @@ public class ListCitiesService extends ServiceBase {
     protected Void doInBackground(Void... params) {
         String json = null;
 
+        Log.e("BAIXANDO CIDADES ", "BAIXANDO CIDADES");
+
         try {
+
             String url = getContext().getResources()
                     .getString(R.string.url_list_cities);
             json = doPost(url);
 
             if (getStatusCode() == HttpStatus.SC_OK) {
+                Log.e("JSON ","JSON "+json);
                 JSONArray arrayCities = new JSONArray(json);
-                Type listType = new TypeToken<List<Cidade>>() {
+                Type listType = new TypeToken<List<City>>() {
                 }.getType();
-                this.cities = (ArrayList<Cidade>) arrayListFromJsonArray(
+                this.cities = (ArrayList<City>) arrayListFromJsonArray(
                         listType, arrayCities);
             } else if (getStatusCode() == HttpStatus.SC_BAD_REQUEST) {
                 JSONObject objectJson = new JSONObject(json);

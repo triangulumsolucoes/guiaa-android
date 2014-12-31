@@ -11,17 +11,17 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import triangulum.com.guiaa.R;
-import triangulum.com.guiaa.model.Cidade;
+import triangulum.com.guiaa.model.City;
 
 /**
  * Created by triangulum on 29/12/14.
  */
-public class CidadesAdapter extends BaseAdapter{
+public class CitiesAdapter extends BaseAdapter{
 
     private Activity activity;
-    private ArrayList<Cidade> cidades;
+    private ArrayList<City> cidades;
 
-    public  CidadesAdapter(Activity activity,ArrayList<Cidade> cidades){
+    public CitiesAdapter(Activity activity, ArrayList<City> cidades){
      this.cidades = cidades;
      this.activity = activity;
     }
@@ -32,7 +32,7 @@ public class CidadesAdapter extends BaseAdapter{
     }
 
     @Override
-    public Cidade getItem(int position) { return cidades.get(position); }
+    public City getItem(int position) { return cidades.get(position); }
 
     @Override
     public long getItemId(int position) {
@@ -43,6 +43,8 @@ public class CidadesAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater mInflater = (LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         convertView = mInflater.inflate(R.layout.row_cidades, null);
+
+        Log.e("CIDADE ","CIDADE "+getItem(position).getNome());
 
         TextView nomeCidade = (TextView)convertView.findViewById(R.id.nome);
         nomeCidade.setText(getItem(position).getNome());

@@ -15,7 +15,7 @@
             android:id="@+id/item_imagem_logo"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/logo_redimencionada" />
+            android:src="@drawable/logo_resized" />
 
         <LinearLayout
             android:id="@+id/area_edittext"
