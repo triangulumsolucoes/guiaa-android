@@ -12,10 +12,16 @@ import triangulum.com.guiaa.R;
 
 
 public class DetalheLocalFragment extends Fragment {
+
+    private View view;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_detalhe_local, container, false);
+        view = inflater.inflate(R.layout.fragment_detalhe_local, container, false);
+
+        return view;
     }
 
 

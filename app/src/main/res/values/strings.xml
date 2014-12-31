@@ -9,6 +9,7 @@
     <string name="address">Endereço</string>
     <string name="phones">Telefone (s)</string>
     <string name="emails">E-mail (s)</string>
+    <string name="actionbar_detail">Detalhes</string>
 
     <!-- HINTS -->
     <string name="hint_wish_find">O que você deseja encontrar?</string>
