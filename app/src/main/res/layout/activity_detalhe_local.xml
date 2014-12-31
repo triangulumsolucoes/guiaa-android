@@ -6,20 +6,12 @@
     <FrameLayout
         android:id="@+id/area_view_mapa"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <include
-            layout="@layout/view_map"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true" />
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/area_view_detalhe_anunciante"/>
 
     <FrameLayout
-        android:id="@+id/area_view_detalhe_contato"
-        android:layout_below="@id/area_view_mapa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </FrameLayout>
+        android:id="@id/area_view_detalhe_anunciante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
