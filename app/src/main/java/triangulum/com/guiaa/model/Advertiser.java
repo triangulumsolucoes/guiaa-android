@@ -1,7 +1,7 @@
 package triangulum.com.guiaa.model;
 
-import android.location.Address;
 
+import triangulum.com.guiaa.model.Address;
 import java.io.Serializable;
 import java.util.ArrayList;
 

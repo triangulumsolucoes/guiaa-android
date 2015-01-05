@@ -74,7 +74,7 @@ public class MenuLateralFragment extends Fragment implements View.OnClickListene
 
                 City city = citiesAdapter.getItem(position);
                 HomeActivity activityHome = (HomeActivity) getActivity();
-                activityHome.setCityChoosen(city);
+                activityHome.setCityChosen(city);
             }
         });
 

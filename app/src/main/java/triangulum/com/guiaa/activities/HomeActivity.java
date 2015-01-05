@@ -30,6 +30,7 @@ public class HomeActivity extends ActionBarActivity implements CitiesListener {
     private ActionBarDrawerToggle mDrawerToggle;
     private MenuLateralFragment fragmentMenuLateral;
     private HomeFragment fragmentHome;
+    private City cityChosen;
 
 
     @Override
@@ -176,7 +177,7 @@ public class HomeActivity extends ActionBarActivity implements CitiesListener {
     }
 
     public void setCityChosen(City city) {
-        fragmentHome.setCityChosen();
+        fragmentHome.setCityChosen(city);
     }
 
     public void trocaFragment(Fragment fragmento) {
@@ -204,6 +205,7 @@ public class HomeActivity extends ActionBarActivity implements CitiesListener {
     public void onCitiesError(String error) {
 
     }
+
 
 
 }
