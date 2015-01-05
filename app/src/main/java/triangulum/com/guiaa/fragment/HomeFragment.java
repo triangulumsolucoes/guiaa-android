@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v==areaSelectionLocation){
+        if(v==areaSelectionLocation) {
             HomeActivity activityHome = (HomeActivity) getActivity();
             activityHome.openDrawer();
         }
