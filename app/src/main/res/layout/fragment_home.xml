@@ -108,7 +108,7 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/area_near"
+        android:id="@+id/area_what_near"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -165,7 +165,7 @@
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/area_near"
+        android:layout_above="@id/area_what_near"
         android:layout_below="@id/area_logo"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

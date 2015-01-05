@@ -21,6 +21,7 @@ import triangulum.com.guiaa.fragment.MenuLateralFragment;
 import triangulum.com.guiaa.interfaces.CitiesListener;
 import triangulum.com.guiaa.model.City;
 import triangulum.com.guiaa.services.ListCitiesService;
+import triangulum.com.guiaa.utils.Utils;
 
 public class HomeActivity extends ActionBarActivity implements CitiesListener {
 
@@ -47,7 +48,9 @@ public class HomeActivity extends ActionBarActivity implements CitiesListener {
 
 
         fragmentMenuLateral = new MenuLateralFragment();
-        serviceListCities();
+        if(Utils.verifyConection(this)){
+            serviceListCities();
+        }
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.left_drawer, fragmentMenuLateral);
