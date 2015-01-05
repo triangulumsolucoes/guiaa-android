@@ -74,6 +74,8 @@ public class Advertiser implements Serializable {
         return latitude;
     }
 
+    public float getLatitudeFloat(){ return Float.parseFloat(this.latitude.trim()); }
+
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
@@ -81,6 +83,8 @@ public class Advertiser implements Serializable {
     public String getLongitude() {
         return longitude;
     }
+
+    public float getLongitudeFloat() { return Float.parseFloat(this.longitude.trim()); }
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;

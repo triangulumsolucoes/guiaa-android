@@ -3,7 +3,6 @@ package triangulum.com.guiaa.fragment;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,8 +40,8 @@ public class MapaDetalheLocalFragment extends Fragment implements OnMarkerClickL
                              Bundle savedInstanceState) {
         view = (View) inflater.inflate(R.layout.view_map, container, false);
 
-        advertiser = (Advertiser) getArguments().getSerializable("advertiserMapDetail");
-        category = (Category) getArguments().getSerializable("categoryMapDetail");
+//        advertiser = (Advertiser) getArguments().getSerializable("advertiserMapDetail");
+//        category = (Category) getArguments().getSerializable("categoryMapDetail");
 
         createMap();
 
@@ -59,35 +58,23 @@ public class MapaDetalheLocalFragment extends Fragment implements OnMarkerClickL
     }
 
     private void createMap() {
-
-        try {
-        FragmentManager myFragmentManager = getActivity().getSupportFragmentManager();
-        SupportMapFragment mySupportMapFragment = (SupportMapFragment) myFragmentManager
-                .findFragmentById(R.id.map);
-
-          Log.d("", "FRAGMENT: " + mySupportMapFragment);
-
-            map = mySupportMapFragment.getMap();
+            map = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map)).getMap();
             map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-            map.setOnMarkerClickListener(this);
-            map.setMyLocationEnabled(true);
-
-            if (advertiser.getLatitude() != null && advertiser.getLongitude() != null) {
-                long latitude = Long.parseLong(advertiser.getLatitude());
-                long longitude = Long.parseLong(advertiser.getLongitude());
-
-                map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 10.0f));
-
-                setSelectionInMap(latitude, longitude);
-            } else {
-                map.setOnMyLocationChangeListener(this);
-            }
-        }catch (Exception e) {
-            Log.d("EXCPTION", "EXCEPTION MAP FRAGMENT : " + e.getMessage());
-        }
+//            map.setOnMarkerClickListener(this);
+//            map.setMyLocationEnabled(true);
+//
+//            if (advertiser.getLatitude() != null && advertiser.getLongitude() != null) {
+//                map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(advertiser.getLatitudeFloat(),
+//                        advertiser.getLongitudeFloat()), 10.0f));
+//
+//                setSelectionInMap(advertiser.getLatitudeFloat(),
+//                        advertiser.getLongitudeFloat());
+//            } else {
+//                map.setOnMyLocationChangeListener(this);
+//            }
     }
 
-    private void setSelectionInMap(long latitude, long longitude){
+    private void setSelectionInMap(float latitude, float longitude) {
         ArrayList<Advertiser> advertisers = new ArrayList<Advertiser>();
         advertisers.add(advertiser);
 
@@ -97,7 +84,7 @@ public class MapaDetalheLocalFragment extends Fragment implements OnMarkerClickL
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(new LatLng(latitude, longitude));
         markerOptions.title(String.valueOf(advertiser.getId()));
-        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(category.getColor()));
+        //markerOptions.icon(BitmapDescriptorFactory.defaultMarker(category.getColor()));
 
         Marker marker = map.addMarker(markerOptions);
 
